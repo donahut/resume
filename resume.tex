@@ -1,0 +1,236 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+\documentclass[10pt, letter]{article}
+\usepackage{fontspec}
+\usepackage{bbding}
+\usepackage{graphicx}
+\usepackage{nopageno}
+\newcommand*\globe{\includegraphics[height=1.6ex]{globe.pdf}}
+\newcommand*\github{\includegraphics[height=2ex]{github.pdf}}
+
+% Set up fonts
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont{Linux Libertine O}
+% \setmonofont[Scale=0.8]{Monaco}
+
+% Layout
+\usepackage[xetex]{geometry}
+\geometry{textwidth=6in, textheight=9.5in, marginparsep=7pt, marginparwidth=.5in}
+\setlength\parindent{0in}
+\usepackage{setspace}
+\singlespacing
+
+% Links
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+
+% Margin
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\footnotesize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{12pt}
+\reversemarginpar
+
+% Headings
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize}
+\subsubsectionfont{\mdseries\upshape\large}
+\renewcommand*\thesubsection{\arabic{subsection}.}
+
+% Lists
+\newenvironment{itemize*}{
+  \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{-1pt}
+    \setlength{\parsep}{-1pt}
+  }{
+  \end{itemize}
+}
+
+% PDF information
+\usepackage[
+bookmarks, colorlinks, breaklinks, unicode,
+pdftitle={Thomas Donahue - Resume},
+pdfauthor={Thomas Donahue},
+pdfproducer={http://thomasjdonahue.net}
+]{hyperref}
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue}
+
+
+%% ------------------------------------------------------------------%%
+%% Document                                                          %%
+%% ------------------------------------------------------------------%%
+\begin{document}
+
+%% ------------------------------------------------------------------%%
+%% Heading                                                           %%
+%% ------------------------------------------------------------------%%
+\begin{minipage}[t]{0.55\textwidth}
+  {\huge Thomas Donahue}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+  \begin{tabular}[h]{ll}
+    \Phone{}    & \texttt{redacted for web}\\
+    \Envelope{} & \href{mailto:thomas.james.donahue@gmail.com}{thomas.james.donahue@gmail.com}\\    
+    \github{}   & \href{http://www.github.com/donahut}{github.com/donahut}
+  \end{tabular}
+\end{minipage}
+
+%% ------------------------------------------------------------------%%
+%% Work Experience                                                   %%
+%% ------------------------------------------------------------------%%
+\section*{Experience}
+\years{Mar 2014--}
+\textbf{Robot Software Engineer}, \textsl{Aldebaran Robotics}
+\begin{itemize*}
+\item Develop interactive robotic applications for the B2B and B2C
+  markets.
+\end{itemize*}
+
+\years{2012--2014}
+\textbf{Doctoral Researcher}, \textsl{Human Robot Interaction Lab,
+  Tufts University}
+\begin{itemize*}
+\item Implemented distributed notification system for the ADE middleware
+\item Overhauled system GUIs for ADE middleware with improved
+  efficiency\\ and speed, as well as a simplified UX 
+\item Designed and conducted HRI study investigating the role of
+  remote video feeds\\ on perceptions of robot teammates; submitted
+  for peer review 
+\item Developing software for data-mining rich audio and video corpora
+  and annotations
+\item Designed and built web-survey platform for multiple HRI studies
+\item Managed local and remote teams of research
+  assistants for long-term project
+\end{itemize*}
+
+\years{2012, 2013}
+\textbf{Teaching Assistant}, \textsl{Computer Science Dept., Tufts University}
+\begin{itemize*}
+\item Maintained automated testing suite for introductory C++ course
+\item Provided instruction to students during lab sections as well as
+  office hours
+\end{itemize*}
+
+\years{2010-2012}
+\textbf{Graduate Research Assistant}, \textsl{Computer-Human
+  Interaction Lab, Bowling Green State University}
+\begin{itemize*}
+\item Part of a team that developed a novel, tangible password input
+  system
+\item Designed, built and tested an alternative UI for World of
+  Warcraft for the visually\\ impaired community
+\item Helped build a series of web-tools for use in undergraduate
+  Geology courses
+\item Investigated the learning benefits of and tradeoffs between
+  mouse, touch and tangible\\ input systems
+\end{itemize*}
+
+%% ------------------------------------------------------------------%%
+%% Education                                                         %%
+%% ------------------------------------------------------------------%%
+\section*{Education}
+
+\years{2012--2014}
+\textbf{Graduate studies in Computer Science}, \textsl{Tufts
+  University, Medford, MA}\\
+\textsl{Withdrew in good standing from Computer Science \& Cognitive
+  Science Joint-Ph.D. program}
+
+\years{2011--2012}
+\textbf{M.S. in Computer Science}, \textsl{Bowling Green State
+  University, Bowling Green, OH}
+
+\years{2007--2011}
+\textbf{B.S. in Computer Science \& Psychology}, \textsl{Bowling Green
+  State University, Bowling Green, OH}\\
+\textsl{Minor in Mathematics, Cum Laude}
+
+%% ------------------------------------------------------------------%%
+%% Technical Skills                                                  %%
+%% ------------------------------------------------------------------%%
+\section*{Technical Skills}
+\textbf{Languages}\\
+
+\vspace{-0.3cm}
+\years{Core:}   
+Java, C++, Python\\
+\years{Experienced:}  
+PHP, Javascript, Clojure, HTML/CSS, R\\
+\years{Exposure:}  
+C, SQL, Scheme, SML, Prolog, CUDA\\
+
+\vspace{-0.3cm}
+\textbf{Tools} \\
+
+\vspace{-0.3cm}
+\years{src Control:}
+Git, Subversion\\
+\years{Build:}
+Ant, Leiningen \\
+\years{Editors:}
+Emacs, IntelliJ IDEA, Visual Studio \\
+\years{Writing:}
+\LaTeX \\
+
+\vspace{-0.3cm}
+\textbf{Platforms}\\
+
+\vspace{-0.3cm}
+\years{Linux:} 
+Considerable Linux development experience, and comfortable at
+the command line shell\\
+\years{Robotics:} 
+Familiar with ROS and have extensive experience working with ADE -- a
+research focused distributed, multi-agent robotics middleware
+
+%% ------------------------------------------------------------------%%
+%% Grants and Awards                                                 %%
+%% ------------------------------------------------------------------%%
+%% \section*{Awards}
+%% \years{2010}
+%% SETGO Summer Research Scholar, Bowling Green State University\\
+%% Undergraduate Research Assistantship, Dept. of Psychology, Bowling
+%% Green State University\\
+%% Best Research Honorable Mention, Sigma Xi - Bowling Green State
+%% University Chapter\\
+%% \years{2009}
+%% SETGO Summer Research Scholar, Bowling Green State University
+
+%% ------------------------------------------------------------------%%
+%% Interests                                                         %%
+%% ------------------------------------------------------------------%%
+%% \section*{Interests}
+%% Oh, you know, this and that.
+
+%% ------------------------------------------------------------------%%
+%% Creative Commons Attribution                                      %%
+%% ------------------------------------------------------------------%%
+%% \vspace{1cm}
+\vfill{}
+% \hrulefill
+\begin{center}
+  {\scriptsize  Last updated: \today\- •\-
+    % ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+    Typeset in \href{http://nitens.org/taraborelli/cvtex}{
+      % \fontspec{Times New Roman}
+      \XeTeX }\\
+    % ---- FILL IN THE FULL URL TO YOUR CV HERE
+    %% \href{http://thomasjdonahue.net/resume/resume.pdf}{http://thomasjdonahue.net/resume}
+}
+\end{center}
+\end{document}
+
+%%% Local Variables:
+%%% TeX-engine: xetex
+%%% End:
+
+%  LocalWords:  VGo telepresence middleware powerlifter
