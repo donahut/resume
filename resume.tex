@@ -13,18 +13,18 @@
 \usepackage{xunicode}
 \usepackage{xltxtra}
 \defaultfontfeatures{Mapping=tex-text}
-\setromanfont{Linux Libertine O}
+\setromanfont{Lato}
 % \setmonofont[Scale=0.8]{Monaco}
 
 % Layout
 \usepackage[xetex]{geometry}
-\geometry{textwidth=6in, textheight=9.5in, marginparsep=7pt, marginparwidth=.5in}
+\geometry{textwidth=6in, textheight=9.5in, marginparsep=7pt, marginparwidth=.7in}
 \setlength\parindent{0in}
 \usepackage{setspace}
 \singlespacing
 
 % Links
-\chardef\&="E050
+%\chardef\&="E050
 \newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
 \newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
 \newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
@@ -48,19 +48,19 @@
 % Lists
 \newenvironment{itemize*}{
   \begin{itemize}
-    \setlength{\itemsep}{0pt}
+    \setlength{\itemsep}{0.2pt}
     \setlength{\parskip}{-1pt}
-    \setlength{\parsep}{-1pt}
+    \setlength{\parsep}{0pt}
   }{
   \end{itemize}
 }
 
 % PDF information
 \usepackage[
-bookmarks, colorlinks, breaklinks, unicode,
-pdftitle={Thomas Donahue - Resume},
-pdfauthor={Thomas Donahue},
-pdfproducer={http://thomasjdonahue.net}
+  bookmarks, colorlinks, breaklinks, unicode,
+  pdftitle={Thomas Donahue - Resume},
+  pdfauthor={Thomas Donahue},
+  pdfproducer={http://donahut.github.io}
 ]{hyperref}
 \hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue}
 
@@ -74,7 +74,7 @@ pdfproducer={http://thomasjdonahue.net}
 %% Heading                                                           %%
 %% ------------------------------------------------------------------%%
 \begin{minipage}[t]{0.55\textwidth}
-  {\huge Thomas Donahue}
+  {\Huge Thomas Donahue}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
   \begin{tabular}[h]{ll}
@@ -95,7 +95,7 @@ pdfproducer={http://thomasjdonahue.net}
   B2B and B2C markets.
 \end{itemize*}
 
-\years{2012--2014}
+\years{2012 - 2014}
 \textbf{Doctoral Researcher}, \textsl{Human Robot Interaction Lab,
   Tufts University}
 \begin{itemize*}
@@ -120,7 +120,7 @@ pdfproducer={http://thomasjdonahue.net}
   office hours
 \end{itemize*}
 
-\years{2010-2012}
+\years{2010 - 2012}
 \textbf{Graduate Research Assistant}, \textsl{Computer-Human
   Interaction Lab, Bowling Green State University}
 \begin{itemize*}
@@ -139,17 +139,17 @@ pdfproducer={http://thomasjdonahue.net}
 %% ------------------------------------------------------------------%%
 \section*{Education}
 
-\years{2012--2014}
+\years{2012 - 2014}
 \textbf{Graduate studies in Computer Science}, \textsl{Tufts
   University, Medford, MA}\\
 \textsl{Withdrew in good standing from Computer Science \& Cognitive
   Science Joint-Ph.D. program}
 
-\years{2011--2012}
+\years{2011 - 2012}
 \textbf{M.S. in Computer Science}, \textsl{Bowling Green State
   University, Bowling Green, OH}
 
-\years{2007--2011}
+\years{2007 - 2011}
 \textbf{B.S. in Computer Science \& Psychology}, \textsl{Bowling Green
   State University, Bowling Green, OH}\\
 \textsl{Minor in Mathematics, Cum Laude}
@@ -216,8 +216,8 @@ the command line shell\\
 %% ------------------------------------------------------------------%%
 %% Creative Commons Attribution                                      %%
 %% ------------------------------------------------------------------%%
-%% \vspace{1cm}
-\vfill{}
+\vspace{-0.4cm}
+%\vfill{}
 % \hrulefill
 \begin{center}
   {\scriptsize  Last updated: \today\- •\-
@@ -226,7 +226,7 @@ the command line shell\\
       % \fontspec{Times New Roman}
       \XeTeX }\\
     % ---- FILL IN THE FULL URL TO YOUR CV HERE
-    %% \href{http://thomasjdonahue.net/resume/resume.pdf}{http://thomasjdonahue.net/resume}
+
 }
 \end{center}
 \end{document}
