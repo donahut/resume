@@ -18,7 +18,9 @@
 
 % Layout
 \usepackage[xetex]{geometry}
-\geometry{textwidth=6in, textheight=9.5in, marginparsep=7pt, marginparwidth=.7in}
+\geometry{textwidth=6in, textheight=10.0in, marginparsep=7pt,
+  marginparwidth=.7in, left=1.3in, right=0.5in}
+%papersize={8.5in, 11.0in}}
 \setlength\parindent{0in}
 \usepackage{setspace}
 \singlespacing
@@ -40,7 +42,7 @@
 % Headings
 \usepackage{sectsty}
 \usepackage[normalem]{ulem}
-\sectionfont{\mdseries\upshape\Large}
+\sectionfont{\color{blue}\mdseries\upshape\Large}
 \subsectionfont{\mdseries\scshape\normalsize}
 \subsubsectionfont{\mdseries\upshape\large}
 \renewcommand*\thesubsection{\arabic{subsection}.}
@@ -53,6 +55,14 @@
     \setlength{\parsep}{0pt}
   }{
   \end{itemize}
+}
+\newenvironment{desc*}{
+  \begin{description}
+    \setlength{\itemsep}{0.2pt}
+    \setlength{\parskip}{-1pt}
+    \setlength{\parsep}{0pt}
+  }{
+  \end{description}
 }
 
 % PDF information
@@ -76,8 +86,10 @@
 \begin{minipage}[t]{0.55\textwidth}
   {\Huge Thomas Donahue}
 \end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
-  \begin{tabular}[h]{ll}
+\begin{minipage}[t]{0.45\textwidth}
+  \flushright 
+  \begin{tabular}[h]{lr}
+    \globe{}    & \href{http://donahut.github.io}{donahut.github.io}\\    
     \Phone{}    & \texttt{redacted for web}\\
     \Envelope{} & \href{mailto:donahut.se@gmail.com}{donahut.se@gmail.com}\\    
     \github{}   & \href{http://www.github.com/donahut}{github.com/donahut}
@@ -89,54 +101,97 @@
 %% ------------------------------------------------------------------%%
 \section*{Experience}
 \years{Mar 2014--}
-\textbf{Robot Software Engineer}, \textsl{Aldebaran}
-\begin{itemize*}
-\item Developing interactive robot applications and behaviors for the
-  B2B and B2C markets.
-\end{itemize*}
+\textbf{Robot Software Engineer}, \textsl{Aldebaran}\\
+As a member of a small, agile (scrum) team, I design and build
+immersive behavior and functionality into Aldebaran's range of
+humanoid robots. I work on the full stack, but my passion is
+generating dynamic natural language dialogs that yield intuitive,
+productive and meaningful human-robot interactions.
+\begin{desc*}
+\item[Keywords:] Python, Robotics, HRI, NLP/NLG, JS, HTML/CSS, C++, Scrum,
+  Linux, Git
+\end{desc*}
 
-\years{2012 - 2014}
-\textbf{Doctoral Researcher}, \textsl{Human Robot Interaction Lab,
-  Tufts University}
-\begin{itemize*}
-\item Implemented distributed notification system for the ADE middleware
-\item Overhauled system GUIs for ADE middleware with improved
-  efficiency and\\ speed, as well as a simplified UX 
-\item Designed and conducted HRI studies investigating the role of
-  remote video feeds\\ on perceptions of robot teammates; submitted
-  for peer review 
-\item Developed software for data-mining rich audio and video corpora
-  and annotations
-\item Designed and built web-survey platform for multiple HRI studies
-%\item Managed local and remote teams of research
-%  assistants for long-term project
-\end{itemize*}
+\years{2012 - 2014} 
+\textbf{Research Assistant}, 
+\textsl{Human Robot Interaction Lab, Tufts University} \\
+Implemented distributed notification system for the ADE middleware.
+Overhauled system GUIs for ADE middleware with improved efficiency and
+speed, as well as a simplified UX. Designed and conducted HRI studies
+investigating the role of remote video feeds on perceptions of robot
+teammates (published IROS14). Developed software for
+data-mining rich audio and video corpora and annotations. Designed and
+built web-survey platform for multiple HRI studies.
+% Managed local and remote teams of research assistants for long-term project
+\begin{desc*}
+\item[Keywords:] Java, Robotics, HRI, NLP/NLG, PHP, JS, HTML/CSS, Linux, Git,
+  SVN, \LaTeX, R
+\end{desc*}
 
 \years{2012, 2013}
-\textbf{Teaching Assistant}, \textsl{Computer Science Dept., Tufts University}
-\begin{itemize*}
-\item Maintained automated testing suite for introductory C++ course
-\item Provided instruction to students during lab sections as well as
-  office hours
-\end{itemize*}
+\textbf{Teaching Assistant}, \textsl{Computer Science Dept., Tufts
+  University} \\
+Maintained automated testing suite for introductory C++ course.
+Provided instruction to students during lab sections as well as office
+hours. \\
 
 \years{2010 - 2012}
-\textbf{Graduate Research Assistant}, \textsl{Computer-Human
-  Interaction Lab, Bowling Green State University}
-\begin{itemize*}
-\item Part of a team that developed a novel, tangible password input
-  system
-\item Designed, built and tested an alternative UI for World of
-  Warcraft for the visually\\ impaired community
-\item Helped build a series of web-tools for use in undergraduate
-  Geology courses
-\item Investigated the learning benefits of and tradeoffs between
-  mouse, touch and tangible\\ input systems
-\end{itemize*}
+\textbf{Research Assistant}, \textsl{Computer-Human
+  Interaction Lab, Bowling Green State University} \\
+Part of a team that developed a novel, tangible password input system.
+Designed, built and tested an alternative UI for World of Warcraft for
+the visually impaired community. Helped build a series of web-tools
+for use in undergraduate Geology courses. Investigated the learning
+benefits of and tradeoffs between mouse, touch and tangible input
+systems.
+\begin{desc*}
+\item[Keywords:] Java, C++, HCI, Tangible/Touch UIs, Accesibility, Windows
+\end{desc*}
+
+%% ------------------------------------------------------------------%%
+%% Technical Skills                                                  %%
+%% ------------------------------------------------------------------%%
+\vspace{-0.5cm}
+\section*{Technical Skills}
+\textbf{Languages}\\
+
+\vspace{-0.3cm}
+\years{Core:}   
+Java, Python, C++\\
+\years{Experienced:}  
+PHP, JS, Clojure, HTML/CSS\\
+\years{Exposure:}  
+C, R, SQL, Scheme, SML, Prolog, CUDA\\
+
+\vspace{-0.2cm}
+\textbf{Tools} \\
+
+\vspace{-0.3cm}
+\years{src Control:}
+Git, Subversion\\
+\years{Build:}
+Ant, Leiningen \\
+\years{Editors:}
+Emacs, IntelliJ IDEA, Visual Studio \\
+\years{Writing:}
+\LaTeX, Org-mode \\
+
+\vspace{-0.2cm}
+\textbf{Platforms}\\
+
+\vspace{-0.3cm}
+\years{Linux:} 
+Considerable Linux development experience, and comfortable at
+the command line shell\\
+\years{Robotics:} 
+Extensive experience working with Aldebaran's NaoQi robotics
+middleware, as well as ADE -- a research focused distributed,
+multi-agent robotics middleware. Familiar with ROS.\\
 
 %% ------------------------------------------------------------------%%
 %% Education                                                         %%
 %% ------------------------------------------------------------------%%
+\vspace{-0.7cm}
 \section*{Education}
 
 \years{2012 - 2014}
@@ -153,46 +208,6 @@
 \textbf{B.S. in Computer Science \& Psychology}, \textsl{Bowling Green
   State University, Bowling Green, OH}\\
 \textsl{Minor in Mathematics, Cum Laude}
-
-%% ------------------------------------------------------------------%%
-%% Technical Skills                                                  %%
-%% ------------------------------------------------------------------%%
-\section*{Technical Skills}
-\textbf{Languages}\\
-
-\vspace{-0.3cm}
-\years{Core:}   
-Java, Python, C++\\
-\years{Experienced:}  
-PHP, Javascript, Clojure, HTML/CSS, R\\
-\years{Exposure:}  
-C, SQL, Scheme, SML, Prolog, CUDA\\
-
-\vspace{-0.3cm}
-\textbf{Tools} \\
-
-\vspace{-0.3cm}
-\years{src Control:}
-Git, Subversion\\
-\years{Build:}
-Ant, Leiningen \\
-\years{Editors:}
-Emacs, IntelliJ IDEA, Visual Studio \\
-%\years{Writing:}
-%\LaTeX \\
-
-\vspace{-0.3cm}
-\textbf{Platforms}\\
-
-\vspace{-0.3cm}
-\years{Robotics:} 
-Hands-on development experience with the MDS, PR2, Nao, Pepper and
-Roomba robots. Familiar with ROS and have extensive experience working
-with Aldebaran's NaoQi robotics middleware, as well as ADE -- a
-research focused distributed, multi-agent robotics middleware\\
-\years{Linux:} 
-Considerable Linux development experience, and comfortable at
-the command line shell\\
 
 %% ------------------------------------------------------------------%%
 %% Grants and Awards                                                 %%
@@ -216,9 +231,9 @@ the command line shell\\
 %% ------------------------------------------------------------------%%
 %% Creative Commons Attribution                                      %%
 %% ------------------------------------------------------------------%%
-\vspace{-0.4cm}
+%\vspace{-0.4cm}
 %\vfill{}
-% \hrulefill
+%\hrulefill
 \begin{center}
   {\scriptsize  Last updated: \today\- •\-
     % ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
