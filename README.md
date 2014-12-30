@@ -1,7 +1,6 @@
 resume
 ------
 
-Couple notes:
+Important note:
 
-1. The HTML is rendered automatically from the PDF via pdftohtml. 
-2. pdftohtml doesn't produce the best looking output (I'm looking into alternatives, like pdf2htmlEX)
+The HTML is rendered automatically from the PDF via the handy conversion tool [pdf2htmlEX](https://github.com/coolwanglu/pdf2htmlEX). I found that the result looked much better than converting directly from the tex source to HTML. 
