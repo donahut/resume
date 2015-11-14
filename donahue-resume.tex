@@ -5,6 +5,7 @@
 \usepackage{bbding}
 \usepackage{graphicx}
 \usepackage{nopageno}
+\usepackage{enumitem}
 \newcommand*\globe{\includegraphics[height=1.6ex]{globe.pdf}}
 \newcommand*\github{\includegraphics[height=2ex]{github.pdf}}
 
@@ -12,9 +13,9 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{xunicode}
 \usepackage{xltxtra}
-\defaultfontfeatures{Mapping=tex-text}
+\defaultfontfeatures{Mapping=tex-text, LetterSpace=1}
 \setromanfont{Lato}
-% \setmonofont[Scale=0.8]{Monaco}
+%% \setmonofont[Scale=0.8]{Monaco}
 
 % Layout
 \usepackage[xetex]{geometry}
@@ -49,14 +50,15 @@
 \renewcommand*\thesubsection{\arabic{subsection}.}
 
 % Lists
-\newenvironment{itemize*}{
-  \begin{itemize}
-    \setlength{\itemsep}{0.2pt}
-    \setlength{\parskip}{-1pt}
-    \setlength{\parsep}{0pt}
-  }{
-  \end{itemize}
-}
+\newenvironment{itemizer}{
+  \begin{itemize}{
+      \setlength{\leftmargin}{*}
+      \setlength{\itemindent}{-10pt}
+      \setlength{\itemsep}{0.2pt}
+      \setlength{\parskip}{-1pt}
+      \setlength{\parsep}{0pt}
+    }}{\end{itemize}}
+
 \newenvironment{desc*}{
   \begin{description}
     \setlength{\itemsep}{0.2pt}
@@ -80,7 +82,7 @@
 %% Document                                                          %%
 %% ------------------------------------------------------------------%%
 \begin{document}
-
+\fontdimen2\font=2pt
 %% ------------------------------------------------------------------%%
 %% Heading                                                           %%
 %% ------------------------------------------------------------------%%
@@ -103,86 +105,93 @@
 \section*{Experience}
 \years{Mar 2014 --} 
 \textbf{\fontsize{10.5pt}{1em}\selectfont Robot Software Engineer},
-\textsl{Aldebaran Robotics}, Boston, MA\\
+\textit{Aldebaran (Softbank Robotics)}, Boston, MA\\
 
 \vspace{-.3cm} 
-Member of a small agile team, as well as a part of a larger
-multinational team with others headquartered in Paris and Shanghai.
-\textsl{Select accomplishments}\,:\, Developed and implemented touch
-sequence gesture extraction algorithm, devised API to allow for future
-extensibility and integrated into novel robot control framework.
-Designed and built autonomous office greeter/receptionist behavior.
-Generated dynamic natural language dialogs by combining internal and
-external knowledge bases as well as knowledge extracted from
-interactions over time. Designed, built and maintain numerous
-consumer-facing web front-ends.
-\vspace{-.1cm}
+Member of a small agile team working across the Aldebaran stack --- from NaoQi middleware modules to core applications.
+\begin{itemize}[leftmargin=*, parsep=-1pt]
+\item Part of the team that designed and built the core
+  application launching and dialog interaction for all\\
+  Aldebaran robots.
+\item Designed and built \textit{Act} framework for semi-autonomous
+  multi-robot---human interactions.
+\item Developed \textit{ALTactileGesture}, a high-level touch sequence
+  gesture recognition module.
+\item Released \textit{Mad Chats}, an interactive Mad Libs-esque word
+  game played between human and robot.
+\item Designed, built and regularly demoed semi-autonomous robot
+  greeter for range of external clients.
+\end{itemize}
+\vspace{-.2cm}
 \begin{desc*}
-\item[\rm \color{Green} \textbf{Keywords}:] Python,$\:$ JS,$\:$ C++,$\:$ HTML/\,CSS,$\:$
-  Robotics,$\:$ HRI,$\:$ Linux,$\:$ Git,$\:$ Agile (Scrum)\\
+\item[\rm \color{Violet} \textbf{Keywords}:] Python,$\:$ JS,$\:$ C++,$\:$ HTML/\,CSS,$\:$
+  HRI,$\:$ Linux,$\:$ Git,$\:$ Scrum\\
 \end{desc*}
 
 \vspace{-.2cm}
 \years{2012 - 2014} 
-\textbf{\fontsize{10.5pt}{1em}\selectfont Research Assistant}, 
-\textsl{Human Robot Interaction Lab, Tufts University}, Medford, MA\\ 
+\textbf{\fontsize{10.5pt}{1em}\selectfont Research and Teaching Assistant}, 
+\textit{Human Robot Interaction Lab, Tufts University}, Medford, MA\\ 
 
 \vspace{-.3cm} 
-Implemented distributed notification system for the ADE robotics
-middleware. Overhauled system GUIs for ADE middleware -- improved
-efficiency and simplified UI. Developed data-mining tools for rich
-audio and video corpora and annotations. Designed and built web-survey
-platform for multiple HRI studies. Designed, conducted and analyzed
-multiple HRI studies investigating multiple factors within human-robot
-teams.
-\vspace{-.1cm}
-\begin{desc*}
-\item[\rm \color{Green} \textbf{Keywords}:] Java,$\:$ JS,$\:$ HTML/\,CSS,$\:$ PHP,$\:$ Robotics,$\:$
-  HRI,$\:$ UI/UX,$\:$ NLP,$\:$ Linux,$\:$ Git,$\:$ SVN,$\:$ \LaTeX,$\:$ R\\
-\end{desc*}
+Areas of focus: human-robot teaming, situated natural language understanding and generation. 
 
+\vspace{-.3cm} 
+\paragraph{\textbf{As research assistant:}}
+\begin{itemize}[leftmargin=*, parsep=-1pt]
+\item Implemented distributed notification system for the ADE robotics
+  middleware. 
+\item Overhauled system GUIs for ADE middleware -- yielding improved
+  stability, efficiency and a simplified UI. 
+\item Developed data-mining tools for rich audio and video corpora and annotations. 
+\item Designed and built web-survey platform for multiple HRI studies. 
+\item Designed, conducted and analyzed multiple HRI studies
+  investigating multiple factors within human-robot teams.
+\end{itemize}
+\vspace{-.5cm} 
+\paragraph{\textbf{As teaching assistant:}}
+\begin{itemize}[leftmargin=*, parsep=-1pt]
+\item Maintained automated testing suite and grading system used by dozens
+of teaching assistants for introductory C++\, course.
+\item Provided instruction to students during lab sections as well as office hours.
+\item Graded homework and exams.
+\end{itemize}
 \vspace{-.2cm}
-\years{2012, 2013} 
-\textbf{\fontsize{10.5pt}{1em}\selectfont Teaching Assistant}, 
-\textsl{Computer Science Dept., Tufts University}, Medford, MA \\ 
-
-\vspace{-.3cm}
-Maintained automated testing suite and grading system used by dozens
-of teaching assistants for introductory C++\, course. Provided
-instruction to students during lab sections as well as office hours.
-Graded homework and exams.
-\vspace{-.1cm}
 \begin{desc*}
-\item[\rm \color{Green} \textbf{Keywords}:] C++,$\:$ Shell-scripting,$\:$ Linux\\
+\item[\rm \color{Violet} \textbf{Keywords}:] Java,$\:$ Clojure,$\:$ C++,$\:$
+  JS,$\:$ HTML/\,CSS,$\:$ PHP,$\:$ HRI,$\:$ NLP,$\:$ Linux,$\:$ Git,$\:$ SVN,$\:$ \LaTeX,$\:$ R\\
 \end{desc*}
 
 \vspace{-.2cm}
 \years{2010 - 2012}
 \textbf{\fontsize{10.5pt}{1em}\selectfont Research Assistant}, 
-\textsl{Computer-Human Interaction Lab, Bowling Green State
+\textit{Computer-Human Interaction Lab, Bowling Green State
   University}, Bowling Green, OH \\
 
 \vspace{-.3cm}
-Part of a team that developed a novel, tangible password input system.
-Designed, built and tested an alternative UI for World of Warcraft for
-the visually impaired community. Helped build a series of web-tools
-for use in undergraduate Geology courses. Investigated the learning
-benefits of and trade-offs between mouse, touch and tangible input
-systems via novel deduction puzzle/\,game.
-\vspace{-.1cm}
+\begin{itemize}[leftmargin=*, parsep=-1pt]
+\item Part of a team that developed a novel tangible password input system.
+\item Designed, built and tested an alternative UI for World of Warcraft for
+  the visually impaired community. 
+\item Investigated the learning benefits of --- and trade-offs between ---
+  mouse, touch and tangible input systems via a novel deduction puzzle/\,game.
+\item Helped build a series of web-tools for use in undergraduate Geology courses. 
+\end{itemize}
+
+\vspace{-.2cm}
 \begin{desc*}
-\item[\rm \color{Green} \textbf{Keywords}:] Java,$\:$ C++,$\:$ HCI,$\:$ Tangible/Touch UIs,$\:$ Accessibility,$\:$ Windows\\
+\item[\rm \color{Violet} \textbf{Keywords}:] Java,$\:$ C++,$\:$ HCI,$\:$ Tangible/Touch UIs,$\:$ Accessibility,$\:$ Windows\\
 \end{desc*}
 
-%% \vspace{-.2cm}
-%% \years{2008 - 2010} 
-%% \textbf{\fontsize{10.5pt}{1em}\selectfont Research Assistant},
-%% \textsl{Rhythm, Attention and Perception Lab, Bowling Green State
-%%   University}, Bowling Green, OH\\ 
+\vspace{-.2cm}
+\years{2008 - 2010} 
+\textbf{\fontsize{10.5pt}{1em}\selectfont Research Assistant},
+\textit{Rhythm, Attention and Perception Lab, Bowling Green State
+  University}, Bowling Green, OH\\ 
 
-%% \vspace{-.3cm}
-%% Independently designed and built neural-network in MATLAB that
-%% modeled human auditory tone categorization.
+\vspace{-.3cm}
+Independently designed and built neural-network in MATLAB that
+modeled human auditory tone categorization.
 
 %% ------------------------------------------------------------------%%
 %% Technical Skills                                                  %%
@@ -193,19 +202,17 @@ systems via novel deduction puzzle/\,game.
 \vspace{-0.3cm}
 \years{Core:}   
 Python,$\:$ C++,$\:$ Java\\
-\years{Experienced:}  
-JS,$\:$ HTML/CSS, $\:$ Clojure,$\:$ PHP\\
-\years{Exposure:}  
-R,$\:$ C,$\:$ Scheme,$\:$ SML,$\:$ SQL,$\:$ Prolog\\
+\years{Proficient:}
+JS,$\:$ HTML/CSS, $\:$ Clojure,$\:$ R,$\:$ PHP\\
+%% \years{Exposure:}  
+%% C,$\:$ Scheme,$\:$ SML,$\:$ SQL,$\:$ Prolog\\
 
-\vspace{-2.15cm}
-\begin{minipage}[hr]{.95\textwidth}
+\vspace{-1.75cm}
+\begin{minipage}[hr]{.85\textwidth}
   \flushright
   \begin{tabular}[h]{ll}
     & \textbf{\fontsize{10.5pt}{1em}\selectfont Tools} \\[0.1cm]
-    \skill{src Control:} & Git,$\:$ Subversion \\
-    \skill{Code Review:} & Gerrit \\
-    \skill{Editors:}     & Emacs,$\:$ IntelliJ IDEA,$\:$ Visual Studio \\
+    \skill{src Control:} & Git,$\:$ Subversion,$\:$ Gerrit \\
     \skill{Writing:}     & \LaTeX,$\:$ Org-mode \\
   \end{tabular}
 \end{minipage}
@@ -215,12 +222,12 @@ R,$\:$ C,$\:$ Scheme,$\:$ SML,$\:$ SQL,$\:$ Prolog\\
 
 \vspace{-0.3cm}
 \years{Linux:} 
-Considerable Linux development experience, and
-comfortable with command line interfaces\\
+Considerable Linux development experience and
+comfortable with command line interfaces.\\
 \years{Robotics:} 
 Extensive development experience with both Aldebaran's NaoQi robotics
-middleware, as well as ADE -- a research focused distributed,
-multi-agent robotics middleware.\\
+middleware, as well as\\ ADE -- a research focused distributed,
+multi-agent robotics middleware.
 
 %% ------------------------------------------------------------------%%
 %% Projects                                                          %%
@@ -235,25 +242,24 @@ multi-agent robotics middleware.\\
 %% ------------------------------------------------------------------%%
 %% Education                                                         %%
 %% ------------------------------------------------------------------%%
-\newpage
+%% \newpage
 \section*{Education}
-
 \years{2012 - 2014}
-\textbf{Graduate studies in Computer Science}, \textsl{Tufts
+\textbf{Graduate studies in Computer Science}, \textit{Tufts
   University, Medford, MA}\\
-\textsl{Withdrew in good standing from Computer Science \& Cognitive
-  Science Joint-Ph.D. program}
+\textit{Withdrew in good standing from Computer Science \& Cognitive
+  Science joint-Ph.D. program}
 
 \vspace{.2cm}
 \years{2011 - 2012}
-\textbf{M.S. in Computer Science}, \textsl{Bowling Green State
+\textbf{M.S. in Computer Science}, \textit{Bowling Green State
   University, Bowling Green, OH}
 
 \vspace{.2cm}
 \years{2007 - 2011}
-\textbf{B.S. in Computer Science \& Psychology}, \textsl{Bowling Green
+\textbf{B.S. in Computer Science \& Psychology}, \textit{Bowling Green
   State University, Bowling Green, OH}\\
-\textsl{Minor in Mathematics, Cum Laude}
+\textit{Minor in Mathematics, Cum Laude}
 
 %% ------------------------------------------------------------------%%
 %% Publications                                                      %%
@@ -261,7 +267,7 @@ multi-agent robotics middleware.\\
 \section*{Publications}
 \years{2015} 
 \textbf{Thomas Donahue}, Matthias Scheutz. \\
-\textsl{Investigating the Effects of Robot Affect and Embodiment on
+\textit{Investigating the Effects of Robot Affect and Embodiment on
   Attention and Natural Language of Human Teammates.} \\
 2015 International Conference on Cognitive Infocommunications
 (CogInfoComm)
@@ -269,7 +275,7 @@ multi-agent robotics middleware.\\
 \vspace{.2cm}
 \years{2014}
 Cody Canning, \textbf{Thomas Donahue}, Matthias Scheutz. \\
-\textsl{Investigating Human Perceptions of Robot Capabilities in
+\textit{Investigating Human Perceptions of Robot Capabilities in
   Remote Human-Robot Team Tasks based on First-Person Robot Video
   Feeds.} \\
 2014 International Conference on Intelligent Robots and Systems
@@ -278,21 +284,21 @@ Cody Canning, \textbf{Thomas Donahue}, Matthias Scheutz. \\
 \vspace{.2cm}
 \years{2013} 
 \textbf{Thomas Donahue}, G. Michael Poor, Martez Mott, et. al. \\
-\textsl{On Interface Closeness and Problem Solving.} \\
+\textit{On Interface Closeness and Problem Solving.} \\
 2013 Conference on Tangible, Embedded and Embodied Interaction
 (TEI)
 
 \vspace{.2cm}
 \years{2012} 
 Martez Mott, \textbf{Thomas Donahue}, G. Michael Poor, et. al. \\
-\textsl{Leveraging Motor Learning for a Tangible Password System.} \\
+\textit{Leveraging Motor Learning for a Tangible Password System.} \\
 2012 Conference on Human Factors in Computing Systems: Extended Abstracts
 (CHI)
 
 \vspace{.2cm}
 \years{2011} 
 G. Michael Poor, \textbf{Thomas Donahue}, Martez Mott, et. al. \\
-\textsl{Access-a-WoW: Building an Enhanced World of Warcraft
+\textit{Access-a-WoW: Building an Enhanced World of Warcraft
   \uppercase{UI} for Persons with Low Visual Acuity.} \\
 2011 International Conference on Universal Access in Human-Computer
 Interaction (UAHCI)
