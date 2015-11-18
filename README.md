@@ -1,6 +1,8 @@
 resume
 ------
 
-Important note:
+The font is Lato.
 
-The HTML is rendered from the PDF via the handy conversion tool [pdf2htmlEX](https://github.com/coolwanglu/pdf2htmlEX). I found that the result looked much better than converting directly from the tex source to HTML. 
+The color palette can be found [here](http://www.paletton.com/#uid=35u0Q0kw0upp5qqtitbCwvwJmxo).
+
+Someday I'll get around to cleaning up all the layout hacks.
