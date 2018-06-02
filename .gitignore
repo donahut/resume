@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!README.md
+!github.pdf
+!globe.pdf
+!donahue-resume.pdf
+!donahue-resume.tex
