@@ -6,11 +6,6 @@
 \usepackage{graphicx}
 \usepackage{nopageno}
 \usepackage{enumitem}
-\newcommand*\globe{\includegraphics[height=2ex]{globe.pdf}}
-\newcommand*\github{\includegraphics[height=2ex]{github.pdf}}
-\newcommand*\phone{\includegraphics[height=2ex]{phone.pdf}}
-\newcommand*\mail{\includegraphics[height=2ex]{mail.pdf}}
-\newcommand*\linkedin{\includegraphics[height=2ex]{linkedin.pdf}}
 
 % Set up fonts
 \usepackage[usenames,dvipsnames]{xcolor}
@@ -28,6 +23,15 @@
 \setlength\parindent{0in}
 \usepackage{setspace}
 \singlespacing
+
+% Contact info
+\newcommand{\icon}[1]{\raisebox{-0.25\height}{\includegraphics[height=2ex]{#1}}}
+\newcommand{\info}[1]{\raisebox{-0.125\height}{#1}}
+\newcommand*\linkedin{\icon{linkedin.pdf}}
+\newcommand*\globe{\icon{globe.pdf}}
+\newcommand*\github{\icon{github.pdf}}
+\newcommand*\phone{\icon{phone.pdf}}
+\newcommand*\mail{\icon{mail.pdf}}
 
 % Links
 %\chardef\&="E050
@@ -96,12 +100,12 @@
 \end{minipage}
 \begin{minipage}[t]{0.45\textwidth}
   \flushright 
-  \begin{tabular}[h]{lr}
-    \globe{}    & \href{http://donahut.github.io}{donahut.github.io}\\    
-    \phone{}    & \texttt{(339) 707-0125}\\
-    \mail{}     & \href{mailto:donahut.se@gmail.com}{donahut.se@gmail.com}\\    
-    \github{}   & \href{http://www.github.com/donahut}{github.com/donahut}\\
-    \linkedin{} & \href{http://www.linkedin.com/in/donahut/}{linkedin.com/in/donahut/}
+  \begin{tabular}[h]{ll}
+    \mail{}     & \info{\href{mailto:donahut.se@gmail.com}{donahut.se@gmail.com}}\\
+    \phone{}    & \info{\texttt{(339) 707-0125}}\\
+    \globe{}    & \info{\href{http://donahut.github.io}{donahut.github.io}}\\
+    \github{}   & \info{\href{http://www.github.com/donahut}{github.com/donahut}}\\
+    \linkedin{} & \info{\href{http://www.linkedin.com/in/donahut/}{linkedin.com/in/donahut}}
   \end{tabular}
 \end{minipage}
 
@@ -114,7 +118,7 @@
 \textit{Jibo}, Boston, MA\\
 
 \vspace{-.3cm}
-Member of the team tasked with making Jibo feel lifelike, produce dynamic behavior, and ensure a consistent character experience across his wide range of interactions and skills --- specializing in dialog interactions.
+Member of the team tasked with making the social robot Jibo feel lifelike, produce dynamic behavior, and ensure a consistent character experience across his wide range of interactions and skills --- specializing in dialog interactions.
 \begin{itemize}[leftmargin=*, parsep=-1pt]
 \item Co-Architect and lead developer of \textit{Embodied Speech}, a subsystem that blends Jibo's speech with animation, graphics and sound to create character rich dialog interactions.
 \item Lead developer of \textit{Chitchat}, Jibo's ontological dialog ability, and co-led \textit{GQA}, Jibo's general question answering service --- the most frequent user-initiated interactions with the robot.
@@ -233,7 +237,8 @@ PHP,$\:$ Scheme,$\:$ SQL,$\:$ R\\
 \begin{minipage}[hr]{0.9\textwidth}
   \flushright
   \begin{tabular}[h]{ll}
-    & \textbf{\fontsize{10.5pt}{1em}\selectfont Tools} \\
+    \vspace{0.125cm}
+    & \textbf{\fontsize{10.5pt}{1em}\selectfont Tools} \\    
     \skill{src Control:} & Git,$\:$ SVN,$\:$ Github,$\:$ Gerrit\\
     \skill{Cloud/DB:}    & Docker,$\:$ SQL,$\:$ Neo4j\\
     \skill{Writing:}     & \LaTeX,$\:$ G Suite\\
@@ -290,7 +295,7 @@ comfortable with command line interfaces.
 \years{2017}
 Cynthia Breazeal, Fardad Faridi, Sigurdur Orn Adalgeirsson, \textbf{Thomas Donahue}, et. al.\\
 \textit{Embodied Dialog and Embodied Speech Authoring Tools For Use With An Expressive Social Robot}\\
-DN/20180133900. JIBO, INC. Boston, MA. US. \textit{Patent Pending}
+DN/US20180133900. JIBO, INC. Boston, MA. US. \textit{Patent Pending}
 
 
 %% ------------------------------------------------------------------%%
