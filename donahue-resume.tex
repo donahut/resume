@@ -12,7 +12,15 @@
 \usepackage{xunicode}
 \usepackage{xltxtra}
 \defaultfontfeatures{Mapping=tex-text, LetterSpace=1}
-\setromanfont{Lato}
+\setmainfont{Lato} [
+  Path = /Users/donahut/Library/Fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular ,
+  ItalicFont = *-Italic ,
+  BoldFont = *-Bold ,
+  BoldItalicFont = *-BoldItalic ,
+]
+\newfontfamily\light{Lato-Light}
 %% \setmonofont[Scale=0.8]{Monaco}
 
 % Layout
@@ -54,7 +62,7 @@
 \definecolor{redblue}{HTML}{C32A4B}
 \definecolor{poppinblue}{HTML}{09629B}
 \sectionfont{\color{poppinblue}\mdseries\upshape\Large}
-\subsectionfont{\mdseries\scshape\normalsize}
+\subsectionfont{\mdseries\scshape\normalsize\textbf}
 \subsubsectionfont{\mdseries\upshape\large}
 \renewcommand*\thesubsection{\arabic{subsection}.}
 
@@ -102,7 +110,7 @@
   \flushright 
   \begin{tabular}[h]{ll}
     \phone{}    & \info{\texttt{(339) 707-0125}}\\
-    \mail{}     & \info{\href{mailto:donahut.se@gmail.com}{donahut.se@gmail.com}}\\
+    \mail{}     & \info{\href{mailto:dev@donahut.email}{dev@donahut.email}}\\
     \globe{}    & \info{\href{http://donahut.github.io}{donahut.github.io}}\\
     \github{}   & \info{\href{http://www.github.com/donahut}{github.com/donahut}}\\
     \linkedin{} & \info{\href{http://www.linkedin.com/in/donahut/}{linkedin.com/in/donahut}}
@@ -117,29 +125,45 @@
 \textbf{\fontsize{10.5pt}{1em}\selectfont Character AI Lead},
 \textit{NTT Disruption}, Boston, MA\bigskip
 
-\vspace{-.3cm}
-Engineering Lead designing and implementing platforms, workflows, toolsets and interactions to provide Jibo with provide industry-leading conversation and character experiences.
-%% \begin{itemize}[leftmargin=*, parsep=-1pt]
-%% %% \item Software Integration Lead; managing, tracking and testing feature development in the pre-- and post--launch phases of gita.
-%% \end{itemize}
+%% \vspace{-.3cm}                 
+Engineering Lead in charge of architecting, developing and evaluating cutting-edge conversational technologies
+and character experiences for Jibo.
+\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+  {\light
+\item Led design, development and collaboration with Microsoft on \textit{Project Pupil}---a
+  multi-lingual, multi-turn, memory-assisted dialog experience built atop Neo4j and BotFramework
+\item Integrated and deployed new advanced multi-lingual text-to-speech (TTS) engine into
+  conversational pipeline; replaced aging, unsupported mono-lingual on-board engine
+\item Upgraded and augmented proprietary, rule-based, mono-lingual NLU pipeline with modern,
+  scalable, multi-lingual cloud services backed by ML/statistical approaches
+\item Contributed to ideation, design and definition of collaborations with, and Jibo deployments
+  to, B2B customers (e.g. Children's Hospitals)
+  }
+\end{itemize}
 %% \vspace{-.2cm}
 \begin{desc*}
-\item[\rm \color{redblue} \textbf{Keywords}:] C++, TypeScript\,/\,JS\,/\,Node,$\:$ Python,$\:$ NLP/NLU,$\:$ HRI \bigbreak
+\item[\rm \color{redblue} \textbf{Keywords}:] TypeScript\,/\,JS\,/\,Node,$\:$ Azure Speech/\,Cognitive Services,$\:$ Neo4j,$\:$ BotFramework,$\:$ NLU,$\:$ HRI \bigbreak
 \end{desc*}
 
 \years{2018 -- 2020} 
 \textbf{\fontsize{10.5pt}{1em}\selectfont Human-Robot Interaction Engineer},
 \textit{Piaggio Fast Forward}, Boston, MA\bigskip
 
-\vspace{-.3cm}
-Member of both Software and Smart Behaviors teams; bridging the gap between the investigation and design of high-level behaviors in gita and their implementation.
-\begin{itemize}[leftmargin=*, parsep=-1pt]
-\item Software Integration Lead; managing, tracking and testing feature development in the pre-- and post--launch phases of gita.
-\item Co-designed, implemented and integrated brokerless, type-safe messaging framework atop ZeroMQ and\\ Cereal as replacement for ROS core\,/\,messages.
-\item Co-developed numerous core app architectures across gita---incorporating modern C++ features and techniques when prudent.
-\item Core contributor to the investigation, design and specification of numerous novel human-robot dyad behaviors for gita.
+%% \vspace{-.3cm}
+Software Integration Lead and Smart Behaviors liaison; bridged the gap between the investigation and
+design of high-level behaviors in gita and their implementation.
+\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+  {\light
+\item Managed, tracked and tested feature development in the pre-- and post--launch phases of gita.
+\item Co-designed, implemented and integrated brokerless, type-safe messaging framework
+  atop ZeroMQ and Cereal as replacement for ROS core\,/\,messages.
+\item Co-developed numerous core app architectures across gita---incorporating modern C++
+  features and techniques when prudent.
+\item Core contributor to the investigation, design and specification of numerous novel
+  human-robot dyad behaviors for gita.
+  }
 \end{itemize}
-\vspace{-.2cm}
+%% \vspace{-.2cm}
 \begin{desc*}
 \item[\rm \color{redblue} \textbf{Keywords}:] C++\,(\,17\,),$\:$ ROS,$\:$ ZeroMQ,$\:$ HRI,$\:$ Linux,$\,$ Git,$\,$ Agile \bigbreak
 \end{desc*}
@@ -148,13 +172,22 @@ Member of both Software and Smart Behaviors teams; bridging the gap between the 
 \textbf{\fontsize{10.5pt}{1em}\selectfont Character AI Engineer},
 \textit{Jibo}, Boston, MA\bigskip
 
-\vspace{-.3cm}
-Member of the team tasked with making the first social robot for the home---Jibo---feel lifelike, produce dynamic behavior, and ensure a consistent character experience across his wide range of interactions and skills.
-\begin{itemize}[leftmargin=*, parsep=-1pt]
-\item Co-architect and lead developer of \textit{Embodied Speech}, a subsystem that blends Jibo's speech with animation, graphics and sound to create character-rich dialog interactions.
-\item Lead developer of \textit{Chitchat}, Jibo's ontological dialog ability, and co-led \textit{GQA}, Jibo's general question-answering service---the most frequent user-initiated interactions with the robot.
-\item Co-designed and implemented a novel, distributed robot/cloud skill architecture resulting in a significant interaction latency reduction and a far more scalable content-delivery pipeline.
-\item Led development of an animation database, a core module that enables queries for, and configuration of, animation and sound assets for on-demand playback and control on Jibo.
+%% \vspace{-.3cm}
+Member of the team tasked with making the first social robot for the home---Jibo---feel lifelike,
+produce dynamic behavior, and ensure a consistent character experience across his wide range of
+interactions and skills.
+\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+  {\light
+\item Co-architect and lead developer of \textit{Embodied Speech}, a subsystem that blends Jibo's
+  speech with animation, graphics and sound to create character-rich dialog interactions.
+\item Lead developer of \textit{Chitchat}, Jibo's ontological dialog ability, and co-led
+  \textit{GQA}, Jibo's general question-answering service---the most frequent user-initiated
+  interactions with the robot.
+\item Co-designed and implemented a novel, distributed robot/cloud skill architecture resulting in a
+  significant interaction latency reduction and a far more scalable content-delivery pipeline.
+\item Led development of an animation database, a core module that enables queries for, and
+  configuration of, animation and sound assets for on-demand playback and control on Jibo.
+  }
 \end{itemize}
 \vspace{-.2cm}
 \begin{desc*}
@@ -165,9 +198,10 @@ Member of the team tasked with making the first social robot for the home---Jibo
 \textbf{\fontsize{10.5pt}{1em}\selectfont Robot Software Engineer},
 \textit{Softbank Robotics (Aldebaran)}, Boston, MA\bigskip
 
-\vspace{-.3cm} 
+%% \vspace{-.3cm} 
 Member of a small agile team working across the Aldebaran stack---from NaoQi middleware modules to core applications.
-\begin{itemize}[leftmargin=*, parsep=-1pt]
+\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+  {\light
 \item Designed and built \textit{Act} framework for semi-autonomous
   multi-robot--human interactions.
 \item Co-developed \textit{ALTactileGesture}, a high-level touch sequence
@@ -175,28 +209,30 @@ Member of a small agile team working across the Aldebaran stack---from NaoQi mid
 \item Released \textit{Mad Chats}, an interactive Mad Libs-esque word
   game played between human and robot.
 \item Part of the team that designed and built a core
-  application launching and dialog interaction for all\\
+  application launching and dialog interaction for all
   Aldebaran robots.
 \item Designed, built and regularly demoed semi-autonomous robot
   greeter for range of external clients.
+  }
 \end{itemize}
-\vspace{-.2cm}
+%% \vspace{-.2cm}
 \begin{desc*}
 \item[\rm \color{redblue} \textbf{Keywords}:] Python,$\:$ JS,$\:$ C++,$\:$ HTML/\,CSS,$\:$
   HRI,$\:$ Linux,$\:$ Git,$\:$ Agile (Scrum)\bigbreak
 \end{desc*}
 
-\newpage
+\section*{Research Experience}
 %% \vspace{-.2cm}
 \years{2012 - 2014} 
 \textbf{\fontsize{10.5pt}{1em}\selectfont Graduate Research\,/\,Teaching Assistant}, 
 \textit{Human Robot Interaction Lab, Tufts University}, Medford, MA\bigskip
 
-\vspace{-.3cm} 
+%% \vspace{-.3cm} 
 Areas of focus: human-robot teaming, situated natural language understanding and generation. 
-\vspace{-.3cm} 
-\paragraph{\textbf{As research assistant:}}
-\begin{itemize}[leftmargin=*, parsep=-1pt]
+%% \vspace{-.3cm} 
+%% \paragraph{\textbf{As research assistant:}}
+\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+  {\light
 \item Implemented distributed notification system for ADE robotics
   middleware. 
 \item Overhauled system GUIs for ADE middleware, yielding improved
@@ -205,15 +241,16 @@ Areas of focus: human-robot teaming, situated natural language understanding and
 \item Designed and built web-survey platform for multiple HRI studies. 
 \item Designed, conducted and analyzed multiple HRI studies
   investigating multiple factors within human-robot teams.
+  }
 \end{itemize}
-\vspace{-.5cm} 
-\paragraph{\textbf{As teaching assistant:}}
-\begin{itemize}[leftmargin=*, parsep=-1pt]
-\item Maintained automated testing suite and grading system used by dozens
-of teaching assistants for introductory C++\, course.
-\item Provided instruction to students during lab sections as well as office hours.
-\end{itemize}
-\vspace{-.2cm}                  
+%% \vspace{-.5cm} 
+%% \paragraph{\textbf{As teaching assistant:}}
+%% \begin{itemize}[leftmargin=*, parsep=-1pt]
+%% \item Maintained automated testing suite and grading system used by dozens
+%% of teaching assistants for introductory C++\, course.
+%% \item Provided instruction to students during lab sections as well as office hours.
+%% \end{itemize}
+%% \vspace{-.2cm}                  
 \begin{desc*}
 \item[\rm \color{redblue} \textbf{Keywords}:] Java,$\:$ Clojure,$\:$ C++,$\:$
   JS,$\:$ HTML/\,CSS,$\:$ PHP,$\:$ HRI,$\:$ NLP,$\:$ Linux,$\:$ Git,$\:$ SVN,$\:$ \LaTeX,$\:$ R\bigbreak
@@ -224,33 +261,36 @@ of teaching assistants for introductory C++\, course.
 \textbf{\fontsize{10.5pt}{1em}\selectfont Graduate Research\,/\,Teaching Assistant}, 
 \textit{Computer-Human Interaction Lab, BGSU}, Bowling Green, OH \bigskip
 
-\vspace{-.3cm} 
+%% \vspace{-.3cm} 
 Areas of focus: Tangible interfaces and accessibility
-\begin{itemize}[leftmargin=*, parsep=-1pt]
+\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+  {\light
 \item Designed, built and tested an alternative UI for World of Warcraft for
   the visually impaired community. 
 \item Investigated the learning benefits of---and trade-offs between---mouse,
   touch and tangible input systems via a novel deduction puzzle/\,game.
 \item Part of a team that developed a novel tangible password input system.
 \item Helped build a series of web-tools for use in undergraduate Geology courses.
+  }
 \end{itemize}
-\vspace{-.2cm}
+%% \vspace{-.2cm}
 \begin{desc*}
 \item[\rm \color{redblue} \textbf{Keywords}:] Java,$\:$ C++,$\:$ HCI,$\:$ Windows\\
 \end{desc*}
 
-\vspace{-.2cm}
+%% \vspace{-.2cm}
 \years{2008 - 2010} 
 \textbf{\fontsize{10.5pt}{1em}\selectfont Research Assistant},
 \textit{Rhythm, Attention and Perception Lab, Bowling Green State
   University}, Bowling Green, OH\\ 
-
 \vspace{-.3cm}
-\begin{itemize}[leftmargin=*, parsep=-1pt]
+\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+  {\light
 \item Independently designed and built neural-network that
-modeled human auditory tone categorization.
+  modeled human auditory tone categorization.
+  }
 \end{itemize}
-\vspace{-.2cm}
+%% \vspace{-.2cm}
 \begin{desc*}
 \item[\rm \color{redblue} \textbf{Keywords}:] MATLAB\\
 \end{desc*}
@@ -260,40 +300,38 @@ modeled human auditory tone categorization.
 %% ------------------------------------------------------------------%%
 \newpage
 \section*{Technical Skills}
-\textbf{\fontsize{10.5pt}{1em}\selectfont Languages}\bigskip
-
-\vspace{-0.3cm}
+\subsection*{Languages}
 \years{Core:}   
-C++ \,(\,17\,),$\:$ Typescript\,/\,JS,$\:$ Python\\
+Typescript\,/\,JS,$\:$ C++\,(\,17\,)\\
 \years{Rusty:}
-Java,$\:$ Clojure,$\:$ HTML/\,CSS\\
+Python,$\:$ Java,$\:$ Clojure,$\:$ HTML/\,CSS\\
 \years{Familiar:}  
 PHP,$\:$ SQL,$\:$ R\\
 
-\vspace{-2.15cm}
-\begin{minipage}[hr]{0.8\textwidth}
+\vspace{-2.3125cm}
+\begin{minipage}[hr]{0.825\textwidth}
   \flushright
-  \begin{tabular}[h]{ll}
-    \vspace{0.125cm}
-    & \textbf{\fontsize{10.5pt}{1em}\selectfont Tools}\\
-    \skill{src Control:} & Git\,/\,Github,$\:$ SVN\\
-    \skill{Cloud/DB:}    & Docker,$\:$ SQL,$\:$ Neo4j\\
-    \skill{Writing:}     & \LaTeX,$\:$ G Suite\\
+  \begin{tabular}[h]{lll}
+    \vspace{0.25cm}
+    & & \textbf{Tools}\\
+    \skill{src Control:} & & Git (Github\,/\,Gitlab),$\:$ SVN\\
+    \skill{Cloud/DB:}    & & Docker,$\:$ Neo4j,$\:$ SQL\\
+    \skill{Writing:}     & & \LaTeX,$\:$ G Suite,$\:$ Office 365\\
   \end{tabular}
 \end{minipage}
 
-\vspace{0.5cm}
-\textbf{\fontsize{10.5pt}{1em}\selectfont Platforms} \bigskip
-
-\vspace{-0.3cm}
-\years{Robotics:}
-Extensive development experience with a range of robots\,/\,robotics platforms, including:
-\begin{itemize}[leftmargin=*, parsep=-1pt]
+\subsection*{Platforms}
+%% \years{Robotics:}
+Extensive development experience with a range of agent\,/\,robotics platforms, including:
+\begin{itemize}[leftmargin=*, parsep=0pt]
+  {\light
+\item Microsoft \textbf{BotFramework}---Enterprise-grade framework for building conversational AI experiences.
 \item \textbf{Jibo}---One of the first social robots for the home.
 \item Piaggio Fast Forwards' \textbf{gita}---Hands-free cargo carrying, following robot.
 \item \textbf{ROS}---Most widely adopted open-source robotics middleware.
 \item Softbank\,/\,Aldebaran's \textbf{Pepper and Nao}---Humanoid robots used in various business/educational settings.  
-\item \textbf{ADE}---a research-focused, distributed, multi-agent robotics middleware.
+\item \textbf{ADE}---A research-focused, distributed, multi-agent robotics middleware.
+  }
 \end{itemize}
 %% \years{Unix:}
 %% Considerable Unix (Linux, OSX) development experience and
@@ -351,35 +389,35 @@ US20180229372A1. Jibo/NTT Distrupt. \textit{Patent Pending}
 %% ------------------------------------------------------------------%%
 \section*{Publications}
 \years{2015} 
-\textbf{Thomas Donahue}, Matthias Scheutz.
+%% \textbf{Thomas Donahue}, Matthias Scheutz.
 \textit{Investigating the Effects of Robot Affect and Embodiment on
   Attention and Natural Language of Human Teammates.} (CogInfoComm '15)
 
 \vspace{.2cm}
 \years{2014}
-Cody Canning, \textbf{Thomas Donahue}, Matthias Scheutz.
+%% Cody Canning, \textbf{Thomas Donahue}, Matthias Scheutz.
 \textit{Investigating Human Perceptions of Robot Capabilities in
   Remote Human-Robot Team Tasks based on First-Person Robot Video
   Feeds.} (IROS '14)
 
 \vspace{.2cm}
 \years{2013} 
-\textbf{Thomas Donahue}, G. Michael Poor, Martez Mott, et. al.
+%% \textbf{Thomas Donahue}, G. Michael Poor, Martez Mott, et. al.
 \textit{On Interface Closeness and Problem Solving.} (TEI '13)
 
 \vspace{.2cm}
 \years{2012} 
-Martez Mott, \textbf{Thomas Donahue}, G. Michael Poor, et. al.
+%% Martez Mott, \textbf{Thomas Donahue}, G. Michael Poor, et. al.
 \textit{Leveraging Motor Learning for a Tangible Password System.} (CHI '12)
 
 \vspace{.2cm}
 \years{2011} 
-G. Michael Poor, \textbf{Thomas Donahue}, Martez Mott, et. al.
+%% G. Michael Poor, \textbf{Thomas Donahue}, Martez Mott, et. al.
 \textit{Access-a-WoW: Building an Enhanced World of Warcraft
   \uppercase{UI} for Persons with Low Visual Acuity.} (UAHCI '11)
 
 %% ------------------------------------------------------------------%%
-%% Achievements                                                 %%
+%% Achievements                                                      %%
 %% ------------------------------------------------------------------%%
 \section*{Achievements}
 \years{2020}
