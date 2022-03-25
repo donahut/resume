@@ -51,7 +51,6 @@
 \usepackage{marginnote}
 \newcommand{\amper{}}{\chardef\amper="E0BD }
 \newcommand{\years}[1]{\marginnote{\footnotesize #1}}
-\newcommand{\skill}[1]{\footnotesize #1}
 \renewcommand*{\raggedleftmarginnote}{}
 \setlength{\marginparsep}{12pt}
 \reversemarginpar
@@ -62,8 +61,8 @@
 \definecolor{redblue}{HTML}{C32A4B}
 \definecolor{poppinblue}{HTML}{09629B}
 \sectionfont{\color{poppinblue}\mdseries\upshape\Large}
-\subsectionfont{\mdseries\scshape\normalsize\textbf}
-\subsubsectionfont{\mdseries\upshape\large}
+\subsectionfont{\mdseries\upshape\large}
+\subsubsectionfont{\mdseries\upshape\normalsize}
 \renewcommand*\thesubsection{\arabic{subsection}.}
 
 % Lists
@@ -122,17 +121,17 @@
 %% ------------------------------------------------------------------%%
 \section*{Experience}
 \years{Sept 2020 --} 
-\textbf{\fontsize{10.5pt}{1em}\selectfont Character AI Lead},
+\textbf{Character AI Lead},
 \textit{NTT Disruption}, Boston, MA\bigskip
 
 %% \vspace{-.3cm}                 
 Engineering Lead in charge of architecting, developing and evaluating cutting-edge conversational technologies
 and character experiences for Jibo.
-\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+\begin{itemize}[leftmargin=*, rightmargin=1.5cm]
   {\light
 \item Led design, development and collaboration with Microsoft on \textit{Project Pupil}---a
   multi-lingual, multi-turn, memory-assisted dialog experience built atop Neo4j and BotFramework
-\item Integrated and deployed new advanced multi-lingual text-to-speech (TTS) engine into
+\item Integrated and deployed new advanced multi-lingual TTS engine into
   conversational pipeline; replaced aging, unsupported mono-lingual on-board engine
 \item Upgraded and augmented proprietary, rule-based, mono-lingual NLU pipeline with modern,
   scalable, multi-lingual cloud services backed by ML/statistical approaches
@@ -142,17 +141,17 @@ and character experiences for Jibo.
 \end{itemize}
 %% \vspace{-.2cm}
 \begin{desc*}
-\item[\rm \color{redblue} \textbf{Keywords}:] TypeScript\,/\,JS\,/\,Node,$\:$ Azure Speech/\,Cognitive Services,$\:$ Neo4j,$\:$ BotFramework,$\:$ NLU,$\:$ HRI \bigbreak
+\item[\rm \color{redblue} Keywords:] TypeScript\,/\,JS\,/\,Node,$\:$ Azure Speech/\,Cognitive Services,$\:$ Neo4j,$\:$ BotFramework,$\:$ NLU,$\:$ HRI \bigbreak
 \end{desc*}
 
 \years{2018 -- 2020} 
-\textbf{\fontsize{10.5pt}{1em}\selectfont Human-Robot Interaction Engineer},
+\textbf{Human-Robot Interaction Engineer},
 \textit{Piaggio Fast Forward}, Boston, MA\bigskip
 
 %% \vspace{-.3cm}
 Software Integration Lead and Smart Behaviors liaison; bridged the gap between the investigation and
 design of high-level behaviors in gita and their implementation.
-\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+\begin{itemize}[leftmargin=*, rightmargin=1.5cm]
   {\light
 \item Managed, tracked and tested feature development in the pre-- and post--launch phases of gita.
 \item Co-designed, implemented and integrated brokerless, type-safe messaging framework
@@ -165,18 +164,18 @@ design of high-level behaviors in gita and their implementation.
 \end{itemize}
 %% \vspace{-.2cm}
 \begin{desc*}
-\item[\rm \color{redblue} \textbf{Keywords}:] C++\,(\,17\,),$\:$ ROS,$\:$ ZeroMQ,$\:$ HRI,$\:$ Linux,$\,$ Git,$\,$ Agile \bigbreak
+\item[\rm \color{redblue} Keywords:] C++\,(17),$\:$ ROS,$\:$ ZeroMQ,$\:$ Autonomous Robot,$\:$ HRI,$\:$ Linux \bigbreak
 \end{desc*}
 
 \years{2016 -- 2018} 
-\textbf{\fontsize{10.5pt}{1em}\selectfont Character AI Engineer},
+\textbf{Character AI Engineer},
 \textit{Jibo}, Boston, MA\bigskip
 
 %% \vspace{-.3cm}
 Member of the team tasked with making the first social robot for the home---Jibo---feel lifelike,
 produce dynamic behavior, and ensure a consistent character experience across his wide range of
 interactions and skills.
-\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+\begin{itemize}[leftmargin=*, rightmargin=1.5cm]
   {\light
 \item Co-architect and lead developer of \textit{Embodied Speech}, a subsystem that blends Jibo's
   speech with animation, graphics and sound to create character-rich dialog interactions.
@@ -191,16 +190,16 @@ interactions and skills.
 \end{itemize}
 \vspace{-.2cm}
 \begin{desc*}
-\item[\rm \color{redblue} \textbf{Keywords}:] TypeScript\,/\,JS\,/\,Node,$\:$ Python,$\:$ NLP/NLU,$\:$ HRI,$\:$ OSX,$\:$ Git,$\:$ Agile (Scrum)\bigbreak
+\item[\rm \color{redblue} Keywords:] TypeScript\,/\,JS\,/\,Node,$\:$ Python,$\:$ Docker,$\:$ NLP/NLU,$\:$ HRI,$\:$ OSX\bigbreak
 \end{desc*}
 
 \years{2014 - 2016} 
-\textbf{\fontsize{10.5pt}{1em}\selectfont Robot Software Engineer},
+\textbf{Robot Software Engineer},
 \textit{Softbank Robotics (Aldebaran)}, Boston, MA\bigskip
 
 %% \vspace{-.3cm} 
 Member of a small agile team working across the Aldebaran stack---from NaoQi middleware modules to core applications.
-\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+\begin{itemize}[leftmargin=*, parsep=1pt, rightmargin=1.5cm]
   {\light
 \item Designed and built \textit{Act} framework for semi-autonomous
   multi-robot--human interactions.
@@ -217,21 +216,19 @@ Member of a small agile team working across the Aldebaran stack---from NaoQi mid
 \end{itemize}
 %% \vspace{-.2cm}
 \begin{desc*}
-\item[\rm \color{redblue} \textbf{Keywords}:] Python,$\:$ JS,$\:$ C++,$\:$ HTML/\,CSS,$\:$
-  HRI,$\:$ Linux,$\:$ Git,$\:$ Agile (Scrum)\bigbreak
+\item[\rm \color{redblue} Keywords:] Python,$\:$ JS,$\:$ C++,$\:$ HTML/\,CSS,$\:$ HRI,$\:$
+  Linux\bigbreak
 \end{desc*}
 
 \section*{Research Experience}
 %% \vspace{-.2cm}
 \years{2012 - 2014} 
-\textbf{\fontsize{10.5pt}{1em}\selectfont Graduate Research\,/\,Teaching Assistant}, 
+\textbf{Graduate Research\,/\,Teaching Assistant}, 
 \textit{Human Robot Interaction Lab, Tufts University}, Medford, MA\bigskip
 
 %% \vspace{-.3cm} 
 Areas of focus: human-robot teaming, situated natural language understanding and generation. 
-%% \vspace{-.3cm} 
-%% \paragraph{\textbf{As research assistant:}}
-\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+\begin{itemize}[leftmargin=*, parsep=1pt, rightmargin=1.5cm]
   {\light
 \item Implemented distributed notification system for ADE robotics
   middleware. 
@@ -243,27 +240,20 @@ Areas of focus: human-robot teaming, situated natural language understanding and
   investigating multiple factors within human-robot teams.
   }
 \end{itemize}
-%% \vspace{-.5cm} 
-%% \paragraph{\textbf{As teaching assistant:}}
-%% \begin{itemize}[leftmargin=*, parsep=-1pt]
-%% \item Maintained automated testing suite and grading system used by dozens
-%% of teaching assistants for introductory C++\, course.
-%% \item Provided instruction to students during lab sections as well as office hours.
-%% \end{itemize}
-%% \vspace{-.2cm}                  
+%% \vspace{-.2cm}
 \begin{desc*}
-\item[\rm \color{redblue} \textbf{Keywords}:] Java,$\:$ Clojure,$\:$ C++,$\:$
-  JS,$\:$ HTML/\,CSS,$\:$ PHP,$\:$ HRI,$\:$ NLP,$\:$ Linux,$\:$ Git,$\:$ SVN,$\:$ \LaTeX,$\:$ R\bigbreak
+\item[\rm \color{redblue} Keywords:] Java,$\:$ Clojure,$\:$ C++,$\:$
+  JS,$\:$ HTML/\,CSS,$\:$ PHP,$\:$ HRI,$\:$ NLP,$\:$ Linux,$\:$ \LaTeX,$\:$ R\bigbreak
 \end{desc*}
 
 %% \vspace{-.2cm}
 \years{2010 - 2012}
-\textbf{\fontsize{10.5pt}{1em}\selectfont Graduate Research\,/\,Teaching Assistant}, 
+\textbf{Graduate Research\,/\,Teaching Assistant}, 
 \textit{Computer-Human Interaction Lab, BGSU}, Bowling Green, OH \bigskip
 
 %% \vspace{-.3cm} 
 Areas of focus: Tangible interfaces and accessibility
-\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+\begin{itemize}[leftmargin=*, parsep=1pt, rightmargin=1.5cm]
   {\light
 \item Designed, built and tested an alternative UI for World of Warcraft for
   the visually impaired community. 
@@ -275,16 +265,16 @@ Areas of focus: Tangible interfaces and accessibility
 \end{itemize}
 %% \vspace{-.2cm}
 \begin{desc*}
-\item[\rm \color{redblue} \textbf{Keywords}:] Java,$\:$ C++,$\:$ HCI,$\:$ Windows\\
+\item[\rm \color{redblue} Keywords:] Java,$\:$ C++,$\:$ HCI,$\:$ Windows\\
 \end{desc*}
 
 %% \vspace{-.2cm}
 \years{2008 - 2010} 
-\textbf{\fontsize{10.5pt}{1em}\selectfont Research Assistant},
+\textbf{Research Assistant},
 \textit{Rhythm, Attention and Perception Lab, Bowling Green State
   University}, Bowling Green, OH\\ 
 \vspace{-.3cm}
-\begin{itemize}[leftmargin=*, parsep=0pt, rightmargin=1.5cm]
+\begin{itemize}[leftmargin=*, parsep=1pt, rightmargin=1.5cm]
   {\light
 \item Independently designed and built neural-network that
   modeled human auditory tone categorization.
@@ -292,7 +282,7 @@ Areas of focus: Tangible interfaces and accessibility
 \end{itemize}
 %% \vspace{-.2cm}
 \begin{desc*}
-\item[\rm \color{redblue} \textbf{Keywords}:] MATLAB\\
+\item[\rm \color{redblue} Keywords:] MATLAB\\
 \end{desc*}
 
 %% ------------------------------------------------------------------%%
@@ -300,30 +290,40 @@ Areas of focus: Tangible interfaces and accessibility
 %% ------------------------------------------------------------------%%
 \newpage
 \section*{Technical Skills}
+%% \subsection*{Languages}
+%% \years{Core:}   
+%% Typescript\,/\,JS,$\:$ C++\,(\,17\,)\\
+%% \years{Rusty:}
+%% Python,$\:$ Java,$\:$ HTML/\,CSS\\
+%% \years{Familiar:}  
+%% Clojure,$\:$ PHP,$\:$ SQL,$\:$ R\\
+
 \subsection*{Languages}
-\years{Core:}   
-Typescript\,/\,JS,$\:$ C++\,(\,17\,)\\
-\years{Rusty:}
-Python,$\:$ Java,$\:$ Clojure,$\:$ HTML/\,CSS\\
-\years{Familiar:}  
-PHP,$\:$ SQL,$\:$ R\\
+\begin{tabular}[h]{lcrlcrlc}
+  \footnotesize{Core:} & {\light Typescript\,/\,JS,$\:$ C++ }        & & \footnotesize{Rusty:} & {\light Python,$\:$ Java,$\:$ HTML/\,CSS } & & \footnotesize{Familiar:} & {\light Clojure,$\:$ PHP,$\:$ R }
+\end{tabular}
 
-\vspace{-2.3125cm}
-\begin{minipage}[hr]{0.825\textwidth}
-  \flushright
-  \begin{tabular}[h]{lll}
-    \vspace{0.25cm}
-    & & \textbf{Tools}\\
-    \skill{src Control:} & & Git (Github\,/\,Gitlab),$\:$ SVN\\
-    \skill{Cloud/DB:}    & & Docker,$\:$ Neo4j,$\:$ SQL\\
-    \skill{Writing:}     & & \LaTeX,$\:$ G Suite,$\:$ Office 365\\
-  \end{tabular}
-\end{minipage}
+\subsection*{Software / Tooling}
+\begin{tabular}[h]{lcrlcrlc}  
+  \footnotesize{Database:} & {\light Neo4j,$\:$ MongoDB,$\:$ MySQL } & & \footnotesize{Cloud:} & {\light Docker,$\:$ Elastic/Kibana }       & & \footnotesize{Source:}   & {\light Git,$\:$ SVN }
+\end{tabular}
+  
+%% \vspace{-2.3125cm}
+%% \begin{minipage}[hr]{0.825\textwidth}
+%%   \flushright
+%%   \begin{tabular}[h]{lll}
+%%     \vspace{0.25cm}
+%%     & & \textbf{Tooling}\\
+%%     \skill{Source:}   & & Git (Github\,/\,Gitlab),$\:$ SVN\\
+%%     \skill{Database:} & & Neo4j,$\:$ MongoDB,$\:$ MySQL\\
+%%     \skill{Cloud:}    & & Docker,$\:$ Kubernetes\\
+%%   \end{tabular}
+%% \end{minipage}
 
-\subsection*{Platforms}
+\subsection*{Platforms / Robots}
 %% \years{Robotics:}
-Extensive development experience with a range of agent\,/\,robotics platforms, including:
-\begin{itemize}[leftmargin=*, parsep=0pt]
+%% Extensive development experience with a range of agent\,/\,robotics platforms, including:
+\begin{itemize}[leftmargin=*, parsep=1pt]
   {\light
 \item Microsoft \textbf{BotFramework}---Enterprise-grade framework for building conversational AI experiences.
 \item \textbf{Jibo}---One of the first social robots for the home.
@@ -333,24 +333,10 @@ Extensive development experience with a range of agent\,/\,robotics platforms, i
 \item \textbf{ADE}---A research-focused, distributed, multi-agent robotics middleware.
   }
 \end{itemize}
-%% \years{Unix:}
-%% Considerable Unix (Linux, OSX) development experience and
-%% comfortable with command line interfaces.
-
-%% ------------------------------------------------------------------%%
-%% Projects                                                          %%
-%% ------------------------------------------------------------------%%
-%% \vspace{-0.7cm}
-%% \section*{Projects}
-
-%% \years{2014}
-%% \years{2012}
-%% \years{2011}
 
 %% ------------------------------------------------------------------%%
 %% Education                                                         %%
 %% ------------------------------------------------------------------%%
-%% \newpage
 \section*{Education}
 \years{2012 - 2014}
 \textbf{Doctoral studies in Computer Science \& Cognitive Science}, \textit{Tufts
@@ -369,10 +355,10 @@ Extensive development experience with a range of agent\,/\,robotics platforms, i
   State University, Bowling Green, OH}\\
 \textit{Minor in Mathematics, Cum Laude}
 
-
 %% ------------------------------------------------------------------%%
 %% Patents                                                           %%
 %% ------------------------------------------------------------------%%
+\vspace{-.2cm}
 \section*{Patents}
 \years{2018}
 \textit{Embodied Dialog and Embodied Speech Authoring Tools For Use With An Expressive Social Robot}\\
@@ -383,10 +369,10 @@ US20180133900A1. Jibo/NTT Distrupt. \textit{Patent Pending}
 \textit{Maintaining Attention and Conveying Believability via Expression and Goal-Directed Behavior with a Social Robot}\\
 US20180229372A1. Jibo/NTT Distrupt. \textit{Patent Pending}
 
-
 %% ------------------------------------------------------------------%%
 %% Publications                                                      %%
 %% ------------------------------------------------------------------%%
+\vspace{-.2cm}
 \section*{Publications}
 \years{2015} 
 %% \textbf{Thomas Donahue}, Matthias Scheutz.
@@ -419,6 +405,7 @@ US20180229372A1. Jibo/NTT Distrupt. \textit{Patent Pending}
 %% ------------------------------------------------------------------%%
 %% Achievements                                                      %%
 %% ------------------------------------------------------------------%%
+\vspace{-.2cm}
 \section*{Achievements}
 \years{2020}
 gita awarded Red Dot's 'Best of the Best' in 'Innovative Products' meta-category
